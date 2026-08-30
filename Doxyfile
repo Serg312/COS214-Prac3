@@ -853,6 +853,7 @@ WARNINGS               = YES
 # The default value is: YES.
 
 WARN_IF_UNDOCUMENTED   = YES
+WARN_LOGFILE           = docs/doxygen_warnings.log
 
 # If the WARN_IF_DOC_ERROR tag is set to YES, doxygen will generate warnings for
 # potential errors in the documentation, such as documenting some parameters in
