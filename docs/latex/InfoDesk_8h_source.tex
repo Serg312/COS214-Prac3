@@ -1,0 +1,28 @@
+\doxysection{Info\+Desk.\+h}
+\hypertarget{InfoDesk_8h_source}{}\label{InfoDesk_8h_source}\index{include/InfoDesk.h@{include/InfoDesk.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INFODESK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INFODESK\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNotice}{Notice}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInfoDesk}{InfoDesk}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventUnit}{EventUnit}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObserver}{Observer}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ staffAvailable;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInfoDesk}{InfoDesk}}(\textcolor{keyword}{const}\ std::string\&\ deskName,\ \textcolor{keywordtype}{int}\ visitorCapacity);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInfoDesk_a7e36b577e9140e74582c7e585e88727f}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInfoDesk_a69bb68616a7b7000f8433724aba36e48}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInfoDesk_a339bea25b18ad220f9f1dfb3335f2dfc}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInfoDesk_a8c988a07d5b94291787b348173ddd9fa}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classInfoDesk_a12dd8d0a8574f0c350781cb8fbb99857}{\string~InfoDesk}}();}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

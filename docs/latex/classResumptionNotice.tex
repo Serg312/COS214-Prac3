@@ -1,0 +1,68 @@
+\doxysection{Resumption\+Notice Class Reference}
+\hypertarget{classResumptionNotice}{}\label{classResumptionNotice}\index{ResumptionNotice@{ResumptionNotice}}
+
+
+Ordinary operational notice\+: signals recovery/resumption after a prior alert.  
+
+
+
+
+{\ttfamily \#include $<$Notice.\+h$>$}
+
+Inheritance diagram for Resumption\+Notice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classResumptionNotice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classResumptionNotice_aae12788d0d8ccd869b8ddf2cf98ba585}{Resumption\+Notice}} (const std\+::string \&msg="{}Normal operations resumed."{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classResumptionNotice}{Resumption\+Notice}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classNotice}{Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNotice_a7243073e6a8e8d274e2bf53163a5bff1}{Notice}} (const std\+::string \&msg, int sev)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classNotice}{Notice} with a message and severity. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classNotice_a535ec24c6347d3b92c98a1131b52d6be}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns this notice\textquotesingle{}s message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNotice_aa6bada2d07b30c77ac80c48798a48225}{get\+Severity}} () const
+\begin{DoxyCompactList}\small\item\em Returns this notice\textquotesingle{}s severity level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classNotice}{Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries message}
+\begin{DoxyCompactList}\small\item\em human readable description of the notice \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNotice_aea670d2d238d0b44cd84e13b570cd7b2}{severity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ordinary operational notice\+: signals recovery/resumption after a prior alert. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classResumptionNotice_aae12788d0d8ccd869b8ddf2cf98ba585}\label{classResumptionNotice_aae12788d0d8ccd869b8ddf2cf98ba585} 
+\index{ResumptionNotice@{ResumptionNotice}!ResumptionNotice@{ResumptionNotice}}
+\index{ResumptionNotice@{ResumptionNotice}!ResumptionNotice@{ResumptionNotice}}
+\doxysubsubsection{\texorpdfstring{ResumptionNotice()}{ResumptionNotice()}}
+{\footnotesize\ttfamily Resumption\+Notice\+::\+Resumption\+Notice (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg = {\ttfamily "{}Normal~operations~resumed."{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classResumptionNotice}{Resumption\+Notice}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The resumption message. Defaults to a generic resumption message if not provided. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Notice.\+h\item 
+src/Notice.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,28 @@
+\doxysection{Cosplay\+Meetup\+Point.\+h}
+\hypertarget{CosplayMeetupPoint_8h_source}{}\label{CosplayMeetupPoint_8h_source}\index{include/CosplayMeetupPoint.h@{include/CosplayMeetupPoint.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COSPLAYMEETUPPOINT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COSPLAYMEETUPPOINT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNotice}{Notice}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCosplayMeetupPoint}{CosplayMeetupPoint}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventUnit}{EventUnit}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObserver}{Observer}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ participants;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCosplayMeetupPoint}{CosplayMeetupPoint}}(\textcolor{keyword}{const}\ std::string\&\ pointName,\ \textcolor{keywordtype}{int}\ participantCapacity);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCosplayMeetupPoint_a116a8c1a8bb4e09f9559f2c73597115d}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCosplayMeetupPoint_ae9d315a14ba88269a93d2f24529c5a23}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCosplayMeetupPoint_abf23cafcffd657df45644d6acdfce896}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCosplayMeetupPoint_a99ae8ddad00528805212f781ef6d19ec}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCosplayMeetupPoint_a5b9c99e04f496c473f81aca6558fce57}{\string~CosplayMeetupPoint}}();}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,106 @@
+\doxysection{Notice Class Reference}
+\hypertarget{classNotice}{}\label{classNotice}\index{Notice@{Notice}}
+
+
+Base class for all event notices pushed through the \doxylink{classObserver}{Observer} collaboration.  
+
+
+
+
+{\ttfamily \#include $<$Notice.\+h$>$}
+
+Inheritance diagram for Notice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.362530cm]{classNotice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNotice_a7243073e6a8e8d274e2bf53163a5bff1}{Notice}} (const std\+::string \&msg, int sev)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classNotice}{Notice} with a message and severity. \end{DoxyCompactList}\item 
+\Hypertarget{classNotice_a0687d954bb1e3c1edd08c130f81dc4ec}\label{classNotice_a0687d954bb1e3c1edd08c130f81dc4ec} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classNotice_a535ec24c6347d3b92c98a1131b52d6be}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns this notice\textquotesingle{}s message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNotice_aa6bada2d07b30c77ac80c48798a48225}{get\+Severity}} () const
+\begin{DoxyCompactList}\small\item\em Returns this notice\textquotesingle{}s severity level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classNotice_ad07e4c63f849c0c960addcd2fd2276a2}\label{classNotice_ad07e4c63f849c0c960addcd2fd2276a2} 
+std\+::string {\bfseries message}
+\begin{DoxyCompactList}\small\item\em human readable description of the notice \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNotice_aea670d2d238d0b44cd84e13b570cd7b2}{severity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all event notices pushed through the \doxylink{classObserver}{Observer} collaboration. 
+
+A \doxylink{classNotice}{Notice} is \doxylink{classNexusCon}{Nexus\+Con}\textquotesingle{}s order/notice representation (see spec section 7, final bullet)\+: it carries the message and severity that get pushed to every observer\textquotesingle{}s update() call, rather than observers pulling state back from the \doxylink{classSubject}{Subject} (push model, Task 3.\+5). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNotice_a7243073e6a8e8d274e2bf53163a5bff1}\label{classNotice_a7243073e6a8e8d274e2bf53163a5bff1} 
+\index{Notice@{Notice}!Notice@{Notice}}
+\index{Notice@{Notice}!Notice@{Notice}}
+\doxysubsubsection{\texorpdfstring{Notice()}{Notice()}}
+{\footnotesize\ttfamily Notice\+::\+Notice (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{int}]{sev }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classNotice}{Notice} with a message and severity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The human-\/readable notice text. \\
+\hline
+{\em sev} & The severity level of this notice. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNotice_a535ec24c6347d3b92c98a1131b52d6be}\label{classNotice_a535ec24c6347d3b92c98a1131b52d6be} 
+\index{Notice@{Notice}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Notice@{Notice}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily std\+::string Notice\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns this notice\textquotesingle{}s message. 
+
+\begin{DoxyReturn}{Returns}
+The human-\/readable notice text. 
+\end{DoxyReturn}
+\Hypertarget{classNotice_aa6bada2d07b30c77ac80c48798a48225}\label{classNotice_aa6bada2d07b30c77ac80c48798a48225} 
+\index{Notice@{Notice}!getSeverity@{getSeverity}}
+\index{getSeverity@{getSeverity}!Notice@{Notice}}
+\doxysubsubsection{\texorpdfstring{getSeverity()}{getSeverity()}}
+{\footnotesize\ttfamily int Notice\+::get\+Severity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns this notice\textquotesingle{}s severity level. 
+
+\begin{DoxyReturn}{Returns}
+The severity level of this notice. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classNotice_aea670d2d238d0b44cd84e13b570cd7b2}\label{classNotice_aea670d2d238d0b44cd84e13b570cd7b2} 
+\index{Notice@{Notice}!severity@{severity}}
+\index{severity@{severity}!Notice@{Notice}}
+\doxysubsubsection{\texorpdfstring{severity}{severity}}
+{\footnotesize\ttfamily int Notice\+::severity\hspace{0.3cm}{\ttfamily [protected]}}
+
+Severity level of the notice. Higher values indicate a more urgent notice (e.\+g. an evacuation is more severe than a schedule change). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Notice.\+h\item 
+src/Notice.\+cpp\end{DoxyCompactItemize}

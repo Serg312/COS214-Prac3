@@ -1,0 +1,140 @@
+\doxysection{Event\+Group Class Reference}
+\hypertarget{classEventGroup}{}\label{classEventGroup}\index{EventGroup@{EventGroup}}
+
+
+Represents a group of event components within the event system.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Group.\+h$>$}
+
+Inheritance diagram for Event\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classEventGroup}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventGroup_a3bbf99818cfd16baeeda09585d302978}{Event\+Group}} (const std\+::string \&group\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventGroup}{Event\+Group} instance. \end{DoxyCompactList}\item 
+\Hypertarget{classEventGroup_acdc32c765e000e71acce7857224854b4}\label{classEventGroup_acdc32c765e000e71acce7857224854b4} 
+void {\bfseries add} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Adds a component to the event group. \end{DoxyCompactList}\item 
+\Hypertarget{classEventGroup_a104078028f10b651cef650ca099cc847}\label{classEventGroup_a104078028f10b651cef650ca099cc847} 
+bool {\bfseries remove} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Removes a component from the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_aa12055a0456c9e6faf6de3a12a70b0e1}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens all components within the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_a600460d78e6fc8d0ec13b1767590dcc9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes all components within the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_abc6919ac70ecf081cdec8c3ffaadc89e}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Reports the current status of the event group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventGroup_affe035069afc221547fe9e848017ee3c}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event group. \end{DoxyCompactList}\item 
+\Hypertarget{classEventGroup_aec45fca847056b3ea8b62899c5903f55}\label{classEventGroup_aec45fca847056b3ea8b62899c5903f55} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Group} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventGroup}{Event\+Group} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a group of event components within the event system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEventGroup_a3bbf99818cfd16baeeda09585d302978}\label{classEventGroup_a3bbf99818cfd16baeeda09585d302978} 
+\index{EventGroup@{EventGroup}!EventGroup@{EventGroup}}
+\index{EventGroup@{EventGroup}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{EventGroup()}{EventGroup()}}
+{\footnotesize\ttfamily Event\+Group\+::\+Event\+Group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classEventGroup}{Event\+Group} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Name} & The name of the event group, used for identification and reporting. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventGroup_a600460d78e6fc8d0ec13b1767590dcc9}\label{classEventGroup_a600460d78e6fc8d0ec13b1767590dcc9} 
+\index{EventGroup@{EventGroup}!close@{close}}
+\index{close@{close}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Event\+Group\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes all components within the event group. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_affe035069afc221547fe9e848017ee3c}\label{classEventGroup_affe035069afc221547fe9e848017ee3c} 
+\index{EventGroup@{EventGroup}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Event\+Group\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the capacity of the event group. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_aa12055a0456c9e6faf6de3a12a70b0e1}\label{classEventGroup_aa12055a0456c9e6faf6de3a12a70b0e1} 
+\index{EventGroup@{EventGroup}!open@{open}}
+\index{open@{open}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Event\+Group\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens all components within the event group. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{classEventGroup_abc6919ac70ecf081cdec8c3ffaadc89e}\label{classEventGroup_abc6919ac70ecf081cdec8c3ffaadc89e} 
+\index{EventGroup@{EventGroup}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Event\+Group\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reports the current status of the event group. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Group.\+h\item 
+src/Event\+Group.\+cpp\end{DoxyCompactItemize}

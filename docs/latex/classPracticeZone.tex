@@ -1,0 +1,133 @@
+\doxysection{Practice\+Zone Class Reference}
+\hypertarget{classPracticeZone}{}\label{classPracticeZone}\index{PracticeZone@{PracticeZone}}
+
+
+Represents a practice zone within the event, capable of receiving notices and reporting its status.  
+
+
+
+
+{\ttfamily \#include $<$Practice\+Zone.\+h$>$}
+
+Inheritance diagram for Practice\+Zone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPracticeZone}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPracticeZone_a904b9d45bc5847d2e06effd4c678f105}{Practice\+Zone}} (const std\+::string \&zone\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classPracticeZone}{Practice\+Zone} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPracticeZone_a2d7a2cc37c4706544ec464b024b35379}{update}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Updates the practice zone based on the received notice. \end{DoxyCompactList}\item 
+\Hypertarget{classPracticeZone_a8e5cfdccec8114163fed68e3f08d64cb}\label{classPracticeZone_a8e5cfdccec8114163fed68e3f08d64cb} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Practice\+Zone} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classPracticeZone}{Practice\+Zone} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventGroup}{Event\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventGroup_a3bbf99818cfd16baeeda09585d302978}{Event\+Group}} (const std\+::string \&group\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventGroup}{Event\+Group} instance. \end{DoxyCompactList}\item 
+void {\bfseries add} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Adds a component to the event group. \end{DoxyCompactList}\item 
+bool {\bfseries remove} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Removes a component from the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_aa12055a0456c9e6faf6de3a12a70b0e1}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens all components within the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_a600460d78e6fc8d0ec13b1767590dcc9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes all components within the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_abc6919ac70ecf081cdec8c3ffaadc89e}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Reports the current status of the event group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventGroup_affe035069afc221547fe9e848017ee3c}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event group. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Group} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventGroup}{Event\+Group} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()
+\begin{DoxyCompactList}\small\item\em The destructor for the \doxylink{classSubject}{Subject} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_a0884bfe374d352c6488a1e40c84246c8}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Registers an observer for future notifications. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_a752a7596d52ab986539232f8377ca92c}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Deregisters an observer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_ab5b0a79cd1214e08f11dbe18611e8f8c}{notify}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Notifies all currently registered observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries observers}
+\begin{DoxyCompactList}\small\item\em Non-\/owning pointers — \doxylink{classSubject}{Subject} does not own its observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a practice zone within the event, capable of receiving notices and reporting its status. 
+
+The \doxylink{classPracticeZone}{Practice\+Zone} class inherits from \doxylink{classEventGroup}{Event\+Group}, \doxylink{classObserver}{Observer}, and \doxylink{classSubject}{Subject}, allowing it to be part of the event\textquotesingle{}s group structure, receive notifications about various events or changes in the system, report its own status accordingly, and manage a list of observers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPracticeZone_a904b9d45bc5847d2e06effd4c678f105}\label{classPracticeZone_a904b9d45bc5847d2e06effd4c678f105} 
+\index{PracticeZone@{PracticeZone}!PracticeZone@{PracticeZone}}
+\index{PracticeZone@{PracticeZone}!PracticeZone@{PracticeZone}}
+\doxysubsubsection{\texorpdfstring{PracticeZone()}{PracticeZone()}}
+{\footnotesize\ttfamily Practice\+Zone\+::\+Practice\+Zone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{zone\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classPracticeZone}{Practice\+Zone} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Name} & The name of the practice zone, used for identification and reporting. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPracticeZone_a2d7a2cc37c4706544ec464b024b35379}\label{classPracticeZone_a2d7a2cc37c4706544ec464b024b35379} 
+\index{PracticeZone@{PracticeZone}!update@{update}}
+\index{update@{update}!PracticeZone@{PracticeZone}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Practice\+Zone\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the practice zone based on the received notice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice received by the practice zone. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Practice\+Zone.\+h\item 
+src/Practice\+Zone.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+\doxysection{Tournament\+Stage.\+h}
+\hypertarget{TournamentStage_8h_source}{}\label{TournamentStage_8h_source}\index{include/TournamentStage.h@{include/TournamentStage.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TOURNAMENTSTAGE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TOURNAMENTSTAGE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTournamentStage}{TournamentStage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventUnit}{EventUnit}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObserver}{Observer}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ matchInProgress;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTournamentStage}{TournamentStage}}(\textcolor{keyword}{const}\ std::string\&\ stageName,\ \textcolor{keywordtype}{int}\ audienceCapacity);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTournamentStage_aebcd4c0cb742ee8da15033fd9fda1cf4}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTournamentStage_a6b03862685eca73ce53fb2284ff044bd}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTournamentStage_a6343cbdc76c7d20d5842dd34157a5401}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTournamentStage_ab427343927dc7e64a2da3167b4ab0d29}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classTournamentStage_a9bf0ef681f8267568607aa28aad6d8f1}{\string~TournamentStage}}();}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

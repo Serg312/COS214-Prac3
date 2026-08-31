@@ -1,0 +1,68 @@
+\doxysection{Technical\+Outage Class Reference}
+\hypertarget{classTechnicalOutage}{}\label{classTechnicalOutage}\index{TechnicalOutage@{TechnicalOutage}}
+
+
+Operational/technical notice\+: equipment or connectivity failure at a unit or zone.  
+
+
+
+
+{\ttfamily \#include $<$Notice.\+h$>$}
+
+Inheritance diagram for Technical\+Outage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTechnicalOutage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTechnicalOutage_af76b37fdd216b7bfea9291679db3c411}{Technical\+Outage}} (const std\+::string \&msg="{}Technical outage reported."{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classTechnicalOutage}{Technical\+Outage} notice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classNotice}{Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNotice_a7243073e6a8e8d274e2bf53163a5bff1}{Notice}} (const std\+::string \&msg, int sev)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classNotice}{Notice} with a message and severity. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classNotice_a535ec24c6347d3b92c98a1131b52d6be}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns this notice\textquotesingle{}s message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNotice_aa6bada2d07b30c77ac80c48798a48225}{get\+Severity}} () const
+\begin{DoxyCompactList}\small\item\em Returns this notice\textquotesingle{}s severity level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classNotice}{Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries message}
+\begin{DoxyCompactList}\small\item\em human readable description of the notice \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNotice_aea670d2d238d0b44cd84e13b570cd7b2}{severity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Operational/technical notice\+: equipment or connectivity failure at a unit or zone. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTechnicalOutage_af76b37fdd216b7bfea9291679db3c411}\label{classTechnicalOutage_af76b37fdd216b7bfea9291679db3c411} 
+\index{TechnicalOutage@{TechnicalOutage}!TechnicalOutage@{TechnicalOutage}}
+\index{TechnicalOutage@{TechnicalOutage}!TechnicalOutage@{TechnicalOutage}}
+\doxysubsubsection{\texorpdfstring{TechnicalOutage()}{TechnicalOutage()}}
+{\footnotesize\ttfamily Technical\+Outage\+::\+Technical\+Outage (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg = {\ttfamily "{}Technical~outage~reported."{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classTechnicalOutage}{Technical\+Outage} notice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The outage message. Defaults to a generic technical outage message if not provided. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Notice.\+h\item 
+src/Notice.\+cpp\end{DoxyCompactItemize}

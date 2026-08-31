@@ -1,0 +1,56 @@
+\doxysection{Event\+Control Class Reference}
+\hypertarget{classEventControl}{}\label{classEventControl}\index{EventControl@{EventControl}}
+
+
+Manages the issuance of notices to registered observers within the event system.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Control.\+h$>$}
+
+Inheritance diagram for Event\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEventControl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEventControl_ae7506622df5596f7385e23ca8e640a5c}\label{classEventControl_ae7506622df5596f7385e23ca8e640a5c} 
+{\bfseries Event\+Control} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventControl}{Event\+Control} instance, initializing the subject-\/observer relationship. \end{DoxyCompactList}\item 
+\Hypertarget{classEventControl_ac21db8f4791c306a2b214309b4e400e6}\label{classEventControl_ac21db8f4791c306a2b214309b4e400e6} 
+void {\bfseries issue\+Notice} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Issues a notice to all registered observers. \end{DoxyCompactList}\item 
+\Hypertarget{classEventControl_a4ad6b2a3ce80b4b223b20783b7103645}\label{classEventControl_a4ad6b2a3ce80b4b223b20783b7103645} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Control} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventControl}{Event\+Control} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()
+\begin{DoxyCompactList}\small\item\em The destructor for the \doxylink{classSubject}{Subject} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_a0884bfe374d352c6488a1e40c84246c8}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Registers an observer for future notifications. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_a752a7596d52ab986539232f8377ca92c}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Deregisters an observer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_ab5b0a79cd1214e08f11dbe18611e8f8c}{notify}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Notifies all currently registered observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries observers}
+\begin{DoxyCompactList}\small\item\em Non-\/owning pointers — \doxylink{classSubject}{Subject} does not own its observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the issuance of notices to registered observers within the event system. 
+
+The \doxylink{classEventControl}{Event\+Control} class inherits from \doxylink{classSubject}{Subject}, allowing it to maintain a list of observers and notify them of various notices or events. It serves as the central point for issuing notices to all registered observers in the system. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Control.\+h\end{DoxyCompactItemize}

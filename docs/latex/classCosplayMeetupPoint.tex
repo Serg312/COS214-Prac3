@@ -1,0 +1,159 @@
+\doxysection{Cosplay\+Meetup\+Point Class Reference}
+\hypertarget{classCosplayMeetupPoint}{}\label{classCosplayMeetupPoint}\index{CosplayMeetupPoint@{CosplayMeetupPoint}}
+
+
+Represents a cosplay meetup point within the event, capable of receiving notices and reporting its status.  
+
+
+
+
+{\ttfamily \#include $<$Cosplay\+Meetup\+Point.\+h$>$}
+
+Inheritance diagram for Cosplay\+Meetup\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCosplayMeetupPoint}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCosplayMeetupPoint_a762750f9b0105316a3c91a526a913288}{Cosplay\+Meetup\+Point}} (const std\+::string \&point\+Name, int participant\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classCosplayMeetupPoint}{Cosplay\+Meetup\+Point} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCosplayMeetupPoint_a116a8c1a8bb4e09f9559f2c73597115d}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the cosplay meetup point, allowing participants to enter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCosplayMeetupPoint_ae9d315a14ba88269a93d2f24529c5a23}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the cosplay meetup point, preventing further participants from entering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCosplayMeetupPoint_abf23cafcffd657df45644d6acdfce896}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Reports the current status of the cosplay meetup point, including participant count and capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCosplayMeetupPoint_a99ae8ddad00528805212f781ef6d19ec}{update}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Updates the cosplay meetup point\textquotesingle{}s state based on a received notice. \end{DoxyCompactList}\item 
+\Hypertarget{classCosplayMeetupPoint_a5b9c99e04f496c473f81aca6558fce57}\label{classCosplayMeetupPoint_a5b9c99e04f496c473f81aca6558fce57} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Cosplay\+Meetup\+Point} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classCosplayMeetupPoint}{Cosplay\+Meetup\+Point} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventUnit_a991e68e6fcacbcecca7178a6256bcb9b}{Event\+Unit}} (const std\+::string \&unit\+Name, int unit\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventUnit}{Event\+Unit} instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventUnit_a18d25238a699c90ff6126e5ea860901b}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event unit. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventUnit}{Event\+Unit} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em The capacity of the event unit. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Open}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event unit is currently open or closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a cosplay meetup point within the event, capable of receiving notices and reporting its status. 
+
+The \doxylink{classCosplayMeetupPoint}{Cosplay\+Meetup\+Point} class inherits from \doxylink{classEventUnit}{Event\+Unit} and \doxylink{classObserver}{Observer}, allowing it to be part of the event\textquotesingle{}s unit structure, receive notifications about various events or changes in the system, and report its own status accordingly. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCosplayMeetupPoint_a762750f9b0105316a3c91a526a913288}\label{classCosplayMeetupPoint_a762750f9b0105316a3c91a526a913288} 
+\index{CosplayMeetupPoint@{CosplayMeetupPoint}!CosplayMeetupPoint@{CosplayMeetupPoint}}
+\index{CosplayMeetupPoint@{CosplayMeetupPoint}!CosplayMeetupPoint@{CosplayMeetupPoint}}
+\doxysubsubsection{\texorpdfstring{CosplayMeetupPoint()}{CosplayMeetupPoint()}}
+{\footnotesize\ttfamily Cosplay\+Meetup\+Point\+::\+Cosplay\+Meetup\+Point (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{point\+Name,  }\item[{int}]{participant\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classCosplayMeetupPoint}{Cosplay\+Meetup\+Point} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+Name} & The name of the cosplay meetup point, used for identification and reporting. \\
+\hline
+{\em participant\+Capacity} & The maximum number of participants allowed at this meetup point. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCosplayMeetupPoint_ae9d315a14ba88269a93d2f24529c5a23}\label{classCosplayMeetupPoint_ae9d315a14ba88269a93d2f24529c5a23} 
+\index{CosplayMeetupPoint@{CosplayMeetupPoint}!close@{close}}
+\index{close@{close}!CosplayMeetupPoint@{CosplayMeetupPoint}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Cosplay\+Meetup\+Point\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the cosplay meetup point, preventing further participants from entering. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{classCosplayMeetupPoint_a116a8c1a8bb4e09f9559f2c73597115d}\label{classCosplayMeetupPoint_a116a8c1a8bb4e09f9559f2c73597115d} 
+\index{CosplayMeetupPoint@{CosplayMeetupPoint}!open@{open}}
+\index{open@{open}!CosplayMeetupPoint@{CosplayMeetupPoint}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Cosplay\+Meetup\+Point\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the cosplay meetup point, allowing participants to enter. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{classCosplayMeetupPoint_abf23cafcffd657df45644d6acdfce896}\label{classCosplayMeetupPoint_abf23cafcffd657df45644d6acdfce896} 
+\index{CosplayMeetupPoint@{CosplayMeetupPoint}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!CosplayMeetupPoint@{CosplayMeetupPoint}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Cosplay\+Meetup\+Point\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reports the current status of the cosplay meetup point, including participant count and capacity. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{classCosplayMeetupPoint_a99ae8ddad00528805212f781ef6d19ec}\label{classCosplayMeetupPoint_a99ae8ddad00528805212f781ef6d19ec} 
+\index{CosplayMeetupPoint@{CosplayMeetupPoint}!update@{update}}
+\index{update@{update}!CosplayMeetupPoint@{CosplayMeetupPoint}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Cosplay\+Meetup\+Point\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the cosplay meetup point\textquotesingle{}s state based on a received notice. 
+
+
+
+Implements \mbox{\hyperlink{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Cosplay\+Meetup\+Point.\+h\item 
+src/Cosplay\+Meetup\+Point.\+cpp\end{DoxyCompactItemize}

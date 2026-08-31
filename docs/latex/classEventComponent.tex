@@ -1,0 +1,128 @@
+\doxysection{Event\+Component Class Reference}
+\hypertarget{classEventComponent}{}\label{classEventComponent}\index{EventComponent@{EventComponent}}
+
+
+Represents a component within the event system.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Component.\+h$>$}
+
+Inheritance diagram for Event\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.518987cm]{classEventComponent}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{open}} ()=0
+\begin{DoxyCompactList}\small\item\em Opens the event component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em Closes the event component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEventComponent_a625b1459850d5a94793c54404a280231}{report\+Status}} () const =0
+\begin{DoxyCompactList}\small\item\em Reports the current status of the event component. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEventComponent_a6128b4c0f20d353a29d45348f48a5f2e}{get\+Capacity}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event component. \end{DoxyCompactList}\item 
+\Hypertarget{classEventComponent_a78f3480318e1019f76fe73e02461f260}\label{classEventComponent_a78f3480318e1019f76fe73e02461f260} 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+\Hypertarget{classEventComponent_a8c34b248d3e7b52a22c72d938db4b8ed}\label{classEventComponent_a8c34b248d3e7b52a22c72d938db4b8ed} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEventComponent_a82348aef118d5b35e0962a4f632cbd19}\label{classEventComponent_a82348aef118d5b35e0962a4f632cbd19} 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a component within the event system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}\label{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae} 
+\index{EventComponent@{EventComponent}!EventComponent@{EventComponent}}
+\index{EventComponent@{EventComponent}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{EventComponent()}{EventComponent()}}
+{\footnotesize\ttfamily Event\+Component\+::\+Event\+Component (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{component\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component\+Name} & The name of the event component, used for identification and reporting. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}\label{classEventComponent_a8e13a68d681c1b6affcf13435a09adab} 
+\index{EventComponent@{EventComponent}!close@{close}}
+\index{close@{close}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void Event\+Component\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Closes the event component. 
+
+
+
+Implemented in \mbox{\hyperlink{classBooth_a6eadad4b00a8778cd349628767f3dcc5}{Booth}}, \mbox{\hyperlink{classCasterBooth_a1c66d147a98fa2c1056a2b50112a332e}{Caster\+Booth}}, \mbox{\hyperlink{classChargingStation_ac5ce68b3360856d6971877259ddd6758}{Charging\+Station}}, \mbox{\hyperlink{classCosplayMeetupPoint_ae9d315a14ba88269a93d2f24529c5a23}{Cosplay\+Meetup\+Point}}, \mbox{\hyperlink{classDemoKiosk_a3b1502c0169b3995cf41d26db1820bfc}{Demo\+Kiosk}}, \mbox{\hyperlink{classEventGroup_a600460d78e6fc8d0ec13b1767590dcc9}{Event\+Group}}, \mbox{\hyperlink{classFirstAidPoint_af1f016bfeff175ca3d5b963014b6e66e}{First\+Aid\+Point}}, \mbox{\hyperlink{classIndieBooth_a8c2b2237bafda17af97f432e1726c7b6}{Indie\+Booth}}, \mbox{\hyperlink{classInfoDesk_a69bb68616a7b7000f8433724aba36e48}{Info\+Desk}}, \mbox{\hyperlink{classPracticeBooth_a3fbe94eb3bf141fde5ebf99fc48beac9}{Practice\+Booth}}, \mbox{\hyperlink{classQueueManagementPoint_ad01edbb2e1c5741ec71382ba85c69271}{Queue\+Management\+Point}}, and \mbox{\hyperlink{classTournamentStage_a6b03862685eca73ce53fb2284ff044bd}{Tournament\+Stage}}.
+
+\Hypertarget{classEventComponent_a6128b4c0f20d353a29d45348f48a5f2e}\label{classEventComponent_a6128b4c0f20d353a29d45348f48a5f2e} 
+\index{EventComponent@{EventComponent}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily virtual int Event\+Component\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the capacity of the event component. 
+
+
+
+Implemented in \mbox{\hyperlink{classEventGroup_affe035069afc221547fe9e848017ee3c}{Event\+Group}}, and \mbox{\hyperlink{classEventUnit_a18d25238a699c90ff6126e5ea860901b}{Event\+Unit}}.
+
+\Hypertarget{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}\label{classEventComponent_ada5f41377769e0cbdaa7546477b3970c} 
+\index{EventComponent@{EventComponent}!open@{open}}
+\index{open@{open}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual void Event\+Component\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Opens the event component. 
+
+
+
+Implemented in \mbox{\hyperlink{classBooth_a9414b6f37e3a72546572de491d8be640}{Booth}}, \mbox{\hyperlink{classCasterBooth_a2703d7f8597ec9be85b2cd3965b5096f}{Caster\+Booth}}, \mbox{\hyperlink{classChargingStation_adec3a2f5fbab0687161ec95003ecaef4}{Charging\+Station}}, \mbox{\hyperlink{classCosplayMeetupPoint_a116a8c1a8bb4e09f9559f2c73597115d}{Cosplay\+Meetup\+Point}}, \mbox{\hyperlink{classDemoKiosk_a9757e61b46e68f9a7400d1ff2e7424cc}{Demo\+Kiosk}}, \mbox{\hyperlink{classEventGroup_aa12055a0456c9e6faf6de3a12a70b0e1}{Event\+Group}}, \mbox{\hyperlink{classFirstAidPoint_af90b14462e1f59f3b5f6ac772f23bd50}{First\+Aid\+Point}}, \mbox{\hyperlink{classIndieBooth_a13adab97b1440de825843e827070bc01}{Indie\+Booth}}, \mbox{\hyperlink{classInfoDesk_a7e36b577e9140e74582c7e585e88727f}{Info\+Desk}}, \mbox{\hyperlink{classPracticeBooth_a7f54884525d16342048cae7e9023972b}{Practice\+Booth}}, \mbox{\hyperlink{classQueueManagementPoint_a80540ac82444f1b87b8e0752062166f7}{Queue\+Management\+Point}}, and \mbox{\hyperlink{classTournamentStage_aebcd4c0cb742ee8da15033fd9fda1cf4}{Tournament\+Stage}}.
+
+\Hypertarget{classEventComponent_a625b1459850d5a94793c54404a280231}\label{classEventComponent_a625b1459850d5a94793c54404a280231} 
+\index{EventComponent@{EventComponent}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily virtual void Event\+Component\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reports the current status of the event component. 
+
+
+
+Implemented in \mbox{\hyperlink{classBooth_a6060ac69dce250c9168f52f4b3535294}{Booth}}, \mbox{\hyperlink{classCasterBooth_ac7aebe5f805c5c6e0f0560840fcec3cb}{Caster\+Booth}}, \mbox{\hyperlink{classChargingStation_a2a66de0efe3dfdfa2e27feb80c5e5611}{Charging\+Station}}, \mbox{\hyperlink{classCosplayMeetupPoint_abf23cafcffd657df45644d6acdfce896}{Cosplay\+Meetup\+Point}}, \mbox{\hyperlink{classDemoKiosk_aad700506e0a5bd6efb3ac2af88758824}{Demo\+Kiosk}}, \mbox{\hyperlink{classEventGroup_abc6919ac70ecf081cdec8c3ffaadc89e}{Event\+Group}}, \mbox{\hyperlink{classFirstAidPoint_a60d42c03bf2773bd5cc6787b1fc28109}{First\+Aid\+Point}}, \mbox{\hyperlink{classIndieBooth_adcac7a11764c5014115c4e35aa014df3}{Indie\+Booth}}, \mbox{\hyperlink{classInfoDesk_a339bea25b18ad220f9f1dfb3335f2dfc}{Info\+Desk}}, \mbox{\hyperlink{classPracticeBooth_ad1a7594fdb7d9477722a3eb238ae9d7d}{Practice\+Booth}}, \mbox{\hyperlink{classQueueManagementPoint_abf8daa986e8bd746e9e18ece4eaefe8c}{Queue\+Management\+Point}}, and \mbox{\hyperlink{classTournamentStage_a6343cbdc76c7d20d5842dd34157a5401}{Tournament\+Stage}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Component.\+h\item 
+src/Event\+Component.\+cpp\end{DoxyCompactItemize}

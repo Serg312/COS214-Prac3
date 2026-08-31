@@ -1,0 +1,164 @@
+\doxysection{Caster\+Booth Class Reference}
+\hypertarget{classCasterBooth}{}\label{classCasterBooth}\index{CasterBooth@{CasterBooth}}
+
+
+Represents a caster booth within the event, capable of receiving notices and reporting its status.  
+
+
+
+
+{\ttfamily \#include $<$Caster\+Booth.\+h$>$}
+
+Inheritance diagram for Caster\+Booth\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCasterBooth}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCasterBooth_ad5a8f9c63b9facbe39c7bcff4d25f51f}{Caster\+Booth}} (const std\+::string \&booth\+Name, int crew\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classCasterBooth}{Caster\+Booth} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCasterBooth_a2703d7f8597ec9be85b2cd3965b5096f}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the caster booth for live streaming. This method sets the booth\textquotesingle{}s status to live and may trigger any necessary notifications or state changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCasterBooth_a1c66d147a98fa2c1056a2b50112a332e}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the caster booth, ending the live stream. This method sets the booth\textquotesingle{}s status to not live and may trigger any necessary notifications or state changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCasterBooth_ac7aebe5f805c5c6e0f0560840fcec3cb}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Reports the current status of the caster booth, including its live status and viewer count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCasterBooth_ac36e4cfc85213ba45eae6c125425e0f3}{update}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Updates the caster booth\textquotesingle{}s state based on a received notice. \end{DoxyCompactList}\item 
+\Hypertarget{classCasterBooth_a94468eec81258ba087868ec51a693641}\label{classCasterBooth_a94468eec81258ba087868ec51a693641} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Caster\+Booth} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classCasterBooth}{Caster\+Booth} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventUnit_a991e68e6fcacbcecca7178a6256bcb9b}{Event\+Unit}} (const std\+::string \&unit\+Name, int unit\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventUnit}{Event\+Unit} instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventUnit_a18d25238a699c90ff6126e5ea860901b}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event unit. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventUnit}{Event\+Unit} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em The capacity of the event unit. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Open}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event unit is currently open or closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a caster booth within the event, capable of receiving notices and reporting its status. 
+
+The \doxylink{classCasterBooth}{Caster\+Booth} class inherits from \doxylink{classEventUnit}{Event\+Unit} and \doxylink{classObserver}{Observer}, allowing it to be part of the event\textquotesingle{}s unit structure and to receive notifications about various events or changes in the system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCasterBooth_ad5a8f9c63b9facbe39c7bcff4d25f51f}\label{classCasterBooth_ad5a8f9c63b9facbe39c7bcff4d25f51f} 
+\index{CasterBooth@{CasterBooth}!CasterBooth@{CasterBooth}}
+\index{CasterBooth@{CasterBooth}!CasterBooth@{CasterBooth}}
+\doxysubsubsection{\texorpdfstring{CasterBooth()}{CasterBooth()}}
+{\footnotesize\ttfamily Caster\+Booth\+::\+Caster\+Booth (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{booth\+Name,  }\item[{int}]{crew\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classCasterBooth}{Caster\+Booth} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em booth\+Name} & The name of the caster booth, used for identification and reporting. \\
+\hline
+{\em crew\+Capacity} & The maximum number of crew members that can be assigned to the caster booth at any given time. This is used to manage staffing levels. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCasterBooth_a1c66d147a98fa2c1056a2b50112a332e}\label{classCasterBooth_a1c66d147a98fa2c1056a2b50112a332e} 
+\index{CasterBooth@{CasterBooth}!close@{close}}
+\index{close@{close}!CasterBooth@{CasterBooth}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Caster\+Booth\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the caster booth, ending the live stream. This method sets the booth\textquotesingle{}s status to not live and may trigger any necessary notifications or state changes. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{classCasterBooth_a2703d7f8597ec9be85b2cd3965b5096f}\label{classCasterBooth_a2703d7f8597ec9be85b2cd3965b5096f} 
+\index{CasterBooth@{CasterBooth}!open@{open}}
+\index{open@{open}!CasterBooth@{CasterBooth}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Caster\+Booth\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the caster booth for live streaming. This method sets the booth\textquotesingle{}s status to live and may trigger any necessary notifications or state changes. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{classCasterBooth_ac7aebe5f805c5c6e0f0560840fcec3cb}\label{classCasterBooth_ac7aebe5f805c5c6e0f0560840fcec3cb} 
+\index{CasterBooth@{CasterBooth}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!CasterBooth@{CasterBooth}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Caster\+Booth\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reports the current status of the caster booth, including its live status and viewer count. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{classCasterBooth_ac36e4cfc85213ba45eae6c125425e0f3}\label{classCasterBooth_ac36e4cfc85213ba45eae6c125425e0f3} 
+\index{CasterBooth@{CasterBooth}!update@{update}}
+\index{update@{update}!CasterBooth@{CasterBooth}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Caster\+Booth\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the caster booth\textquotesingle{}s state based on a received notice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice containing information about the event or change. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Caster\+Booth.\+h\item 
+src/Caster\+Booth.\+cpp\end{DoxyCompactItemize}
