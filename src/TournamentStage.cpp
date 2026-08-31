@@ -29,11 +29,12 @@ void TournamentStage::reportStatus() const
 
 void TournamentStage::update(const Notice& notice)
 {
-    std::cout << "[Booth] " << name << " received notice: " << notice.getMessage() << std::endl;
+    std::cout << "[TournamentStage] " << name << " received notice: " << notice.getMessage() << std::endl;
 
     if (dynamic_cast<const EvacuationNotice*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": Evacuation, closing stage immediately." << std::endl;
+        std::cout << "[TournamentStage] " << name << ": [STREAM SYNC PROTOCOL] Emergency pause broadcast signal dispatched to streaming overlay." << std::endl;
+        std::cout << "[TournamentStage] " << name << ": Evacuation, closing stage immediately." << std::endl;
         if (isOpen)
         {
             close();
@@ -41,15 +42,17 @@ void TournamentStage::update(const Notice& notice)
     }
     else if (dynamic_cast<const CapacityWarning*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": capacity warning received. Limiting new visitors." << std::endl;
+        std::cout << "[TournamentStage] " << name << ": capacity warning received. Limiting new visitors." << std::endl;
     }
     else if (dynamic_cast<const TechnicalOutage*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": technical issue reported. Staff checking equipment." << std::endl;
+        std::cout << "[TournamentStage] " << name << ": [STREAM SYNC PROTOCOL] Technical outage detected. Pausing match clock & broadcasting technical difficulties screen." << std::endl;
+        matchInProgress = false;
     }
     else if (dynamic_cast<const ResumptionNotice*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": normal operations may resume." << std::endl;
+        std::cout << "[TournamentStage] " << name << ": [STREAM SYNC PROTOCOL] Match clock resumed. Stream overlay set to active game feed." << std::endl;
+        if (isOpen) matchInProgress = true;
     }
     else if (dynamic_cast<const OpenNotice*>(&notice) != nullptr)
     {
@@ -60,7 +63,7 @@ void TournamentStage::update(const Notice& notice)
     }
     else
     {
-        std::cout << "[Booth] " << name << ": notice acknowledged." << std::endl;
+        std::cout << "[TournamentStage] " << name << ": notice acknowledged." << std::endl;
     }
 
 }
