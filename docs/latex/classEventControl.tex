@@ -18,15 +18,15 @@ Inheritance diagram for Event\+Control\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classEventControl_ae7506622df5596f7385e23ca8e640a5c}\label{classEventControl_ae7506622df5596f7385e23ca8e640a5c} 
-{\bfseries Event\+Control} ()
-\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventControl}{Event\+Control} instance, initializing the subject-\/observer relationship. \end{DoxyCompactList}\item 
-\Hypertarget{classEventControl_ac21db8f4791c306a2b214309b4e400e6}\label{classEventControl_ac21db8f4791c306a2b214309b4e400e6} 
-void {\bfseries issue\+Notice} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice)
-\begin{DoxyCompactList}\small\item\em Issues a notice to all registered observers. \end{DoxyCompactList}\item 
-\Hypertarget{classEventControl_a4ad6b2a3ce80b4b223b20783b7103645}\label{classEventControl_a4ad6b2a3ce80b4b223b20783b7103645} 
+\mbox{\hyperlink{classEventControl_a254c93db2f0484b4a4edbd7c0fd7568c}{Event\+Control}} (const std\+::string \&control\+Name)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classEventControl}{Event\+Control}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventControl_ac21db8f4791c306a2b214309b4e400e6}{issue\+Notice}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Issue a notice to every currently registered observer. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classEventControl_aa177b09330f6f68ac0c0c003895a12d0}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of this control point. \end{DoxyCompactList}\item 
+\Hypertarget{classEventControl_ad8fcc15169bd6829ac92497adf216b94}\label{classEventControl_ad8fcc15169bd6829ac92497adf216b94} 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Control} ()
-\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventControl}{Event\+Control} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSubject}{Subject}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,6 +51,58 @@ Manages the issuance of notices to registered observers within the event system.
 
 The \doxylink{classEventControl}{Event\+Control} class inherits from \doxylink{classSubject}{Subject}, allowing it to maintain a list of observers and notify them of various notices or events. It serves as the central point for issuing notices to all registered observers in the system. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEventControl_a254c93db2f0484b4a4edbd7c0fd7568c}\label{classEventControl_a254c93db2f0484b4a4edbd7c0fd7568c} 
+\index{EventControl@{EventControl}!EventControl@{EventControl}}
+\index{EventControl@{EventControl}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{EventControl()}{EventControl()}}
+{\footnotesize\ttfamily Event\+Control\+::\+Event\+Control (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{control\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \doxylink{classEventControl}{Event\+Control}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control\+Name} & Human-\/readable name for this control point. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEventControl_aa177b09330f6f68ac0c0c003895a12d0}\label{classEventControl_aa177b09330f6f68ac0c0c003895a12d0} 
+\index{EventControl@{EventControl}!getName@{getName}}
+\index{getName@{getName}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& Event\+Control\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of this control point. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::string\& This control point\textquotesingle{}s name. 
+\end{DoxyReturn}
+\Hypertarget{classEventControl_ac21db8f4791c306a2b214309b4e400e6}\label{classEventControl_ac21db8f4791c306a2b214309b4e400e6} 
+\index{EventControl@{EventControl}!issueNotice@{issueNotice}}
+\index{issueNotice@{issueNotice}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{issueNotice()}{issueNotice()}}
+{\footnotesize\ttfamily void Event\+Control\+::issue\+Notice (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})}
+
+
+
+Issue a notice to every currently registered observer. 
+
+Thin, semantically-\/named wrapper around \doxylink{classSubject_ab5b0a79cd1214e08f11dbe18611e8f8c}{Subject\+::notify()}, representing the control centre actively broadcasting a change (e.\+g. "{}issue an evacuation notice"{}) rather than a generic call.
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice to broadcast to all registered observers. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Event\+Control.\+h\end{DoxyCompactItemize}
+include/Event\+Control.\+h\item 
+src/Event\+Control.\+cpp\end{DoxyCompactItemize}
