@@ -29,11 +29,11 @@ void QueueManagementPoint::reportStatus() const
 
 void QueueManagementPoint::update(const Notice& notice)
 {
-    std::cout << "[Booth] " << name << " received notice: " << notice.getMessage() << std::endl;
+    std::cout << "[QueueManagementPoint] " << name << " received notice: " << notice.getMessage() << std::endl;
 
     if (dynamic_cast<const EvacuationNotice*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": Evacuation, closing off queue immediately." << std::endl;
+        std::cout << "[QueueManagementPoint] " << name << ": Evacuation, closing off queue immediately." << std::endl;
         if (isOpen)
         {
             close();
@@ -41,15 +41,15 @@ void QueueManagementPoint::update(const Notice& notice)
     }
     else if (dynamic_cast<const CapacityWarning*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": capacity warning received. Limiting new visitors." << std::endl;
+        std::cout << "[QueueManagementPoint] " << name << ": capacity warning received. Limiting new visitors." << std::endl;
     }
     else if (dynamic_cast<const TechnicalOutage*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": technical issue reported. Staff checking equipment." << std::endl;
+        std::cout << "[QueueManagementPoint] " << name << ": technical issue reported. Staff checking equipment." << std::endl;
     }
     else if (dynamic_cast<const ResumptionNotice*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": normal operations may resume." << std::endl;
+        std::cout << "[QueueManagementPoint] " << name << ": normal operations may resume." << std::endl;
     }
     else if (dynamic_cast<const OpenNotice*>(&notice) != nullptr)
     {
@@ -60,7 +60,7 @@ void QueueManagementPoint::update(const Notice& notice)
     }
     else
     {
-        std::cout << "[Booth] " << name << ": notice acknowledged." << std::endl;
+        std::cout << "[QueueManagementPoint] " << name << ": notice acknowledged." << std::endl;
     }
 
 }
