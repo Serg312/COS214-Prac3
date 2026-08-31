@@ -6,8 +6,8 @@
 class DemoKiosk : public EventUnit 
 {
     private:
-        int totalUnits;    ///< Number of hardware demo units at this kiosk.
-        int poweredUnits;  ///< Number of units currently powered on.
+        int totalUnits;   
+        int poweredUnits;  
     public:
         DemoKiosk(const std::string& kioskName, int hardwareUnits);
         void open() override;

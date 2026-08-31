@@ -6,8 +6,8 @@
 class CasterBooth : public EventUnit 
 {
     private:
-        bool isLive;       ///< Whether the booth is currently broadcasting.
-        int viewerCount;   ///< Simulated number of concurrent viewers.
+        bool isLive;       
+        int viewerCount;   
     public:
         CasterBooth(const std::string& boothName, int crewCapacity);
         void open() override;

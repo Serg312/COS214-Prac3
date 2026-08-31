@@ -6,8 +6,8 @@
 class ChargingStation : public EventUnit 
 {
     private:
-        int totalPorts;   ///< Total number of charging ports available.
-        int activePorts;  ///< Number of ports currently supplying power.
+        int totalPorts;   
+        int activePorts;
     public:
         ChargingStation(const std::string& stationName, int portCount);
         void open() override;

@@ -6,8 +6,8 @@
 class Booth : public EventUnit 
 {
     private:
-        bool staffed;      ///< Whether staff are currently present.
-        int footTraffic;   ///< Simulated number of visitors currently browsing.
+        bool staffed;    
+        int footTraffic;   
     public:
         Booth(const std::string& boothName, int visitorCapacity);
         void open() override;
