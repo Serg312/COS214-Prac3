@@ -20,7 +20,7 @@ void PracticeBooth::close()
 
 void PracticeBooth::reportStatus() const 
 {
-    std::cout << "Practice Booth \"" << name << "\" - " << (occupied ? "OCCUPIED" : "OCCUPIED")  << ", capacity: " << capacity << std::endl;
+    std::cout << "Practice Booth \"" << name << "\" - " << (occupied ? "OCCUPIED" : "VACANT")  << ", capacity: " << capacity << std::endl;
 }
 
 void PracticeBooth::update(const Notice& notice)
