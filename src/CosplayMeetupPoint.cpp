@@ -29,11 +29,16 @@ void CosplayMeetupPoint::update(const Notice& notice)
 
     if (dynamic_cast<const EvacuationNotice*>(&notice) != nullptr)
     {
+        std::cout << "[Cosplay Meetup Point] " << name << ": [SAFETY BEACON] Activating high-visibility emergency beacon directing cosplayers to nearest evacuation route and FirstAid station." << std::endl;
         std::cout << "[Cosplay Meetup Point] " << name << ": Evacuation, please leave meetup point immediately." << std::endl;
         if (isOpen)
         {
             close();
         }
+    }
+    else if (dynamic_cast<const QueueOverflowAlert*>(&notice) != nullptr)
+    {
+        std::cout << "[Cosplay Meetup Point] " << name << ": [SAFETY BEACON] Crowd congestion alert! Activating beacon to reroute excess attendees to secondary photo areas." << std::endl;
     }
     else if (dynamic_cast<const CapacityWarning*>(&notice) != nullptr)
     {
