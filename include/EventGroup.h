@@ -11,7 +11,7 @@ class EventGroup : public EventComponent
     public:
         EventGroup(const std::string& groupName);
         void add(EventComponent* component);
-        void remove(EventComponent* component);
+        bool remove(EventComponent* component);
         void open() override;
         void close() override;
         void reportStatus() const override;
