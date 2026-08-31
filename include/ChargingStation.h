@@ -2,8 +2,9 @@
 #define CHARGINGSTATION_H
 
 #include "EventUnit.h"
+#include "Observer.h"
 
-class ChargingStation : public EventUnit 
+class ChargingStation : public EventUnit, public Observer
 {
     private:
         int totalPorts;   
@@ -13,6 +14,7 @@ class ChargingStation : public EventUnit
         void open() override;
         void close() override;
         void reportStatus() const override;
+        void update(const Notice& notice) override;
         virtual ~ChargingStation();
 };
 

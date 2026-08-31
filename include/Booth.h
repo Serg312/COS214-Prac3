@@ -2,8 +2,9 @@
 #define BOOTH_H
 
 #include "EventUnit.h"
+#include "Observer.h"
 
-class Booth : public EventUnit 
+class Booth : public EventUnit, public Observer
 {
     private:
         bool staffed;    
@@ -13,6 +14,7 @@ class Booth : public EventUnit
         void open() override;
         void close() override;
         void reportStatus() const override;
+        void update(const Notice& notice) override;
         virtual ~Booth();
 };
 

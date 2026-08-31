@@ -2,8 +2,9 @@
 #define DEMOKIOSK_H
 
 #include "EventUnit.h"
+#include "Observer.h"
 
-class DemoKiosk : public EventUnit 
+class DemoKiosk : public EventUnit, public Observer
 {
     private:
         int totalUnits;   
@@ -13,6 +14,7 @@ class DemoKiosk : public EventUnit
         void open() override;
         void close() override;
         void reportStatus() const override;
+        void update(const Notice& notice) override;
         virtual ~DemoKiosk();
 };
 

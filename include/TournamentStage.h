@@ -2,8 +2,9 @@
 #define TOURNAMENTSTAGE_H
 
 #include "EventUnit.h"
+#include "Observer.h"
 
-class TournamentStage : public EventUnit 
+class TournamentStage : public EventUnit, public Observer
 {
     private:
         bool matchInProgress;
@@ -12,6 +13,7 @@ class TournamentStage : public EventUnit
         void open() override;
         void close() override;
         void reportStatus() const override;
+        void update(const Notice& notice) override;
         virtual ~TournamentStage();
 };
 

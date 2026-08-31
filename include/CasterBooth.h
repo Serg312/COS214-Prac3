@@ -2,8 +2,9 @@
 #define CASTERBOOTH_H
 
 #include "EventUnit.h"
+#include "Observer.h"
 
-class CasterBooth : public EventUnit 
+class CasterBooth : public EventUnit, public Observer
 {
     private:
         bool isLive;       
@@ -13,6 +14,7 @@ class CasterBooth : public EventUnit
         void open() override;
         void close() override;
         void reportStatus() const override;
+        void update(const Notice& notice) override;
         virtual ~CasterBooth();
 };
 
