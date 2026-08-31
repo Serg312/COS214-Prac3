@@ -21,24 +21,17 @@ protected:
     std::vector<Observer*> observers;
 
 public:
-    /// @brief Clears the registration list without deleting observers.
+    /// @brief The destructor for the Subject class.
     virtual ~Subject();
-    /**
-     * @brief Registers an observer for future notifications.
-     * @param observer Observer to register. Must not be nullptr.
-     *
-     * Policy: a duplicate attach() of the same pointer is ignored.
-     */
+    ///@brief Registers an observer for future notifications.
+    ///@param observer Observer to register. Must not be nullptr.
+    ///Policy: a duplicate attach() of the same pointer is ignored.
     virtual void attach(Observer* observer);
-        /**
-     * @brief Deregisters an observer.
-     * @param observer Observer to remove. If not currently registered, this is a no-op.
-     */
+    ///@brief Deregisters an observer.
+    ///@param observer Observer to remove. If not currently registered, this is a no-op.
     virtual void detach(Observer* observer);
-    /**
-     * @brief Notifies all currently registered observers.
-     * @param notice The notice being issued to every registered observer.
-     */
+    ///@brief Notifies all currently registered observers.
+    ///@param notice The notice being issued to every registered observer.
     virtual void notify(const Notice& notice);
 };
 
