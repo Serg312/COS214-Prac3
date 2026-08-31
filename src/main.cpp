@@ -19,22 +19,16 @@
 // Helper function for visual section headers in console output
 void printBanner(const std::string& title) 
 {
-    std::cout << "\n======================================================\n";
-    std::cout << "  " << title << "\n";
-    std::cout << "======================================================\n" << std::endl;
+    std::cout << "  " << title << "\n\n\n";
 }
 
 int main() 
 {
-    // -----------------------------------------------------------------
     // STEP 1: Initialize Central Event Control (Top-Level Subject)
-    // -----------------------------------------------------------------
     printBanner("STEP 1: INITIALIZING CENTRAL EVENT CONTROL");
-    EventControl eventControl;
+    EventControl eventControl = EventControl("NexusCon Control Center");
 
-    // -----------------------------------------------------------------
     // STEP 2: Build Venue Hierarchy (Composite Pattern)
-    // -----------------------------------------------------------------
     printBanner("STEP 2: BUILDING VENUE TREE (COMPOSITE PATTERN)");
 
     // Root node
@@ -76,9 +70,7 @@ int main()
 
     std::cout << "[Setup] Composite tree successfully assembled.\n";
 
-    // -----------------------------------------------------------------
     // STEP 3: Wire Notification Hierarchy (Observer Pattern)
-    // -----------------------------------------------------------------
     printBanner("STEP 3: REGISTERING OBSERVERS (OBSERVER PATTERN)");
 
     // Central Controller -> Root Composite
@@ -103,18 +95,14 @@ int main()
 
     std::cout << "[Setup] Observer notification paths configured.\n";
 
-    // -----------------------------------------------------------------
     // STEP 4: Initial System State & Recursive Capacity Check
-    // -----------------------------------------------------------------
     printBanner("STEP 4: SYSTEM BASELINE & RECURSIVE CAPACITY");
 
     std::cout << "Total Venue Capacity: " << rootCon->getCapacity() << " visitors\n\n";
     std::cout << "--- Initial Status Report ---\n";
     rootCon->reportStatus();
 
-    // -----------------------------------------------------------------
     // STEP 5: Scenario Simulations (Testing Task 3 & 4 Features)
-    // -----------------------------------------------------------------
     
     // Scenario 5.1: Opening Facility
     printBanner("SCENARIO 5.1: MORNING OPENING BROADCAST");
@@ -154,9 +142,7 @@ int main()
     ResumptionNotice clearNotice("All clear issued. System returning to standard operational status.");
     eventControl.issueNotice(clearNotice);
 
-    // -----------------------------------------------------------------
     // STEP 6: Safe Teardown & Memory Cleanup
-    // -----------------------------------------------------------------
     printBanner("STEP 6: TEARDOWN & MEMORY DEALLOCATION");
 
     // Detach Root from EventControl central subject
@@ -167,7 +153,6 @@ int main()
     rootCon = nullptr;
 
     std::cout << "[Teardown] Memory tree successfully freed.\n";
-    std::cout << "======================================================\n";
 
     return 0;
 }
