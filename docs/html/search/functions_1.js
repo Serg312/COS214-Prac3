@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['capacitywarning_0',['CapacityWarning',['../classCapacityWarning.html#a06b0a5d9cc4723897236e73981d3a007',1,'CapacityWarning']]]
+  ['booth_0',['Booth',['../classBooth.html#adef4f0686dc9fac48a0020af8d7f3dea',1,'Booth']]]
 ];

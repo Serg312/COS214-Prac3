@@ -82,12 +82,29 @@ $(function() {
  <a href="classSubject.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Subject_8h_source.html">Subject.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Subject:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSubject.png" usemap="#Subject_map" alt=""/>
+  <map id="Subject_map" name="Subject_map">
+<area href="classCommunityZone.html" title="Represents a community zone within the event, capable of receiving notices and reporting its status." alt="CommunityZone" shape="rect" coords="113,56,216,80"/>
+<area href="classEventControl.html" title="Manages the issuance of notices to registered observers within the event system." alt="EventControl" shape="rect" coords="113,112,216,136"/>
+<area href="classExpoFloor.html" title="Represents an expo floor within the event, capable of receiving notices, reporting its status,..." alt="ExpoFloor" shape="rect" coords="113,168,216,192"/>
+<area href="classIndieAlley.html" title="Represents an indie alley within the event, capable of receiving notices, reporting its status,..." alt="IndieAlley" shape="rect" coords="113,224,216,248"/>
+<area href="classMainArea.html" title="Represents the main area within the event, capable of receiving notices and reporting its status." alt="MainArea" shape="rect" coords="113,280,216,304"/>
+<area href="classNexusCon.html" title="Represents the NexusCon event, capable of receiving notices and reporting its status." alt="NexusCon" shape="rect" coords="113,336,216,360"/>
+<area href="classPracticeZone.html" title="Represents a practice zone within the event, capable of receiving notices and reporting its status." alt="PracticeZone" shape="rect" coords="113,392,216,416"/>
+<area href="classPublisherRow.html" title="Represents a publisher row within the event, capable of receiving notices and reporting its status." alt="PublisherRow" shape="rect" coords="113,448,216,472"/>
+<area href="classTournamentHall.html" title="Represents a tournament hall within the event, capable of receiving notices and reporting its status." alt="TournamentHall" shape="rect" coords="113,504,216,528"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c4f522850f718466e5be7eb55ba1969" id="r_a7c4f522850f718466e5be7eb55ba1969"><td class="memItemLeft" align="right" valign="top"><a id="a7c4f522850f718466e5be7eb55ba1969" name="a7c4f522850f718466e5be7eb55ba1969"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Subject</b> ()</td></tr>
-<tr class="memdesc:a7c4f522850f718466e5be7eb55ba1969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the registration list without deleting observers. <br /></td></tr>
+<tr class="memdesc:a7c4f522850f718466e5be7eb55ba1969"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor for the <a class="el" href="classSubject.html" title="Subject role of the Observer pattern.">Subject</a> class. <br /></td></tr>
 <tr class="separator:a7c4f522850f718466e5be7eb55ba1969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0884bfe374d352c6488a1e40c84246c8" id="r_a0884bfe374d352c6488a1e40c84246c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubject.html#a0884bfe374d352c6488a1e40c84246c8">attach</a> (<a class="el" href="classObserver.html">Observer</a> *observer)</td></tr>
 <tr class="memdesc:a0884bfe374d352c6488a1e40c84246c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an observer for future notifications.  <br /></td></tr>
@@ -137,11 +154,10 @@ std::vector&lt; <a class="el" href="classObserver.html">Observer</a> * &gt;&#160
 <p>Registers an observer for future notifications. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">observer</td><td><a class="el" href="classObserver.html">Observer</a> to register. Must not be nullptr.</td></tr>
+    <tr><td class="paramname">observer</td><td><a class="el" href="classObserver.html">Observer</a> to register. Must not be nullptr. Policy: a duplicate <a class="el" href="classSubject.html#a0884bfe374d352c6488a1e40c84246c8" title="Registers an observer for future notifications.">attach()</a> of the same pointer is ignored. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Policy: a duplicate <a class="el" href="classSubject.html#a0884bfe374d352c6488a1e40c84246c8" title="Registers an observer for future notifications.">attach()</a> of the same pointer is ignored. </p>
 
 </div>
 </div>

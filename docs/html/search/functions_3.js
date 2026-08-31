@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['evacuationnotice_0',['EvacuationNotice',['../classEvacuationNotice.html#ab80e6fe58843c3437f53e852af209d51',1,'EvacuationNotice']]]
+  ['demokiosk_0',['DemoKiosk',['../classDemoKiosk.html#ab9448af8aef3b05b2a8295540a33eb82',1,'DemoKiosk']]],
+  ['detach_1',['detach',['../classSubject.html#a752a7596d52ab986539232f8377ca92c',1,'Subject']]]
 ];

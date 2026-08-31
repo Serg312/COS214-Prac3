@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observers_0',['observers',['../classSubject.html#a39d24e695db0a792799b351dbebde992',1,'Subject']]]
+  ['isopen_0',['isOpen',['../classEventUnit.html#a20d256580f9b879b6dcf8b5e1ba4103c',1,'EventUnit']]]
 ];

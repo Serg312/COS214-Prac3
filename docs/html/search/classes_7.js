@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['technicaloutage_0',['TechnicalOutage',['../classTechnicalOutage.html',1,'']]]
+  ['nexuscon_0',['NexusCon',['../classNexusCon.html',1,'']]],
+  ['notice_1',['Notice',['../classNotice.html',1,'']]]
 ];

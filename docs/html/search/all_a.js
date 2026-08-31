@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['severity_0',['severity',['../classNotice.html#aea670d2d238d0b44cd84e13b570cd7b2',1,'Notice']]],
-  ['subject_1',['Subject',['../classSubject.html',1,'']]]
+  ['observer_0',['Observer',['../classObserver.html',1,'']]],
+  ['observers_1',['observers',['../classSubject.html#a39d24e695db0a792799b351dbebde992',1,'Subject']]],
+  ['open_2',['open',['../classBooth.html#a9414b6f37e3a72546572de491d8be640',1,'Booth::open()'],['../classCasterBooth.html#a2703d7f8597ec9be85b2cd3965b5096f',1,'CasterBooth::open()'],['../classChargingStation.html#adec3a2f5fbab0687161ec95003ecaef4',1,'ChargingStation::open()'],['../classCosplayMeetupPoint.html#a116a8c1a8bb4e09f9559f2c73597115d',1,'CosplayMeetupPoint::open()'],['../classDemoKiosk.html#a9757e61b46e68f9a7400d1ff2e7424cc',1,'DemoKiosk::open()'],['../classEventComponent.html#ada5f41377769e0cbdaa7546477b3970c',1,'EventComponent::open()'],['../classEventGroup.html#aa12055a0456c9e6faf6de3a12a70b0e1',1,'EventGroup::open()'],['../classFirstAidPoint.html#af90b14462e1f59f3b5f6ac772f23bd50',1,'FirstAidPoint::open()'],['../classIndieBooth.html#a13adab97b1440de825843e827070bc01',1,'IndieBooth::open()'],['../classInfoDesk.html#a7e36b577e9140e74582c7e585e88727f',1,'InfoDesk::open()'],['../classPracticeBooth.html#a7f54884525d16342048cae7e9023972b',1,'PracticeBooth::open()'],['../classQueueManagementPoint.html#a80540ac82444f1b87b8e0752062166f7',1,'QueueManagementPoint::open()'],['../classTournamentStage.html#aebcd4c0cb742ee8da15033fd9fda1cf4',1,'TournamentStage::open()']]],
+  ['opennotice_3',['opennotice',['../classOpenNotice.html#a25f7befabe466779b645f4fe04363107',1,'OpenNotice::OpenNotice()'],['../classOpenNotice.html',1,'OpenNotice']]]
 ];
