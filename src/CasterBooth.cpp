@@ -8,7 +8,7 @@ void CasterBooth::open()
     isOpen = true;
     isLive = true;
     viewerCount = 100; 
-    std::cout << "[CasterBooth] " << name << ": going live, viewers joining stream." << std::endl;
+    std::cout << "[CasterBooth] " << name << ": going live, viewers joining the stream." << std::endl;
 }
 
 void CasterBooth::close() 

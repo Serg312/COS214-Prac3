@@ -1,10 +1,10 @@
 #include "TournamentStage.h"
 #include <iostream>
 
-TournamentStage::TournamentStage(const std::string& stageName, int audienceCapacity)
-    : EventUnit(stageName, audienceCapacity), matchInProgress(false) {}
+TournamentStage::TournamentStage(const std::string& stageName, int audienceCapacity) : EventUnit(stageName, audienceCapacity), matchInProgress(false) {}
 
-void TournamentStage::open() {
+void TournamentStage::open() 
+{
     isOpen = true;
     matchInProgress = true;
     std::cout << "[TournamentStage] " << name << ": match clock started, competitors on stage." << std::endl;

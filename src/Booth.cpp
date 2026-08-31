@@ -8,12 +8,12 @@ void Booth::open()
     isOpen = true;
     staffed = true;
     footTraffic = 0;
-    std::cout << "[Booth] " << name << ": staff have arrived, merchandise and banners available." << std::endl;
+    std::cout << "[Booth] " << name << ": staff arrived, merchandise and banners available." << std::endl;
 }
 
 void Booth::close() 
 {
-    std::cout << "[Booth] " << name << ": staff packing away merchandise." << std::endl;
+    std::cout << "[Booth] " << name << ": merchandise packed away." << std::endl;
     staffed = false;
     footTraffic = 0;
     isOpen = false;
