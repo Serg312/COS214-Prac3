@@ -1,0 +1,159 @@
+\doxysection{Demo\+Kiosk Class Reference}
+\hypertarget{classDemoKiosk}{}\label{classDemoKiosk}\index{DemoKiosk@{DemoKiosk}}
+
+
+Represents a demo kiosk within the event, capable of receiving notices and reporting its status.  
+
+
+
+
+{\ttfamily \#include $<$Demo\+Kiosk.\+h$>$}
+
+Inheritance diagram for Demo\+Kiosk\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDemoKiosk}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDemoKiosk_ab9448af8aef3b05b2a8295540a33eb82}{Demo\+Kiosk}} (const std\+::string \&kiosk\+Name, int hardware\+Units)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classDemoKiosk}{Demo\+Kiosk} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDemoKiosk_a9757e61b46e68f9a7400d1ff2e7424cc}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the demo kiosk, powering on all hardware units. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDemoKiosk_a3b1502c0169b3995cf41d26db1820bfc}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the demo kiosk, powering off all hardware units. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDemoKiosk_aad700506e0a5bd6efb3ac2af88758824}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Reports the current status of the demo kiosk, including hardware unit counts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDemoKiosk_a65d44fd2e9105ef65f8f942f432ce41d}{update}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Updates the demo kiosk\textquotesingle{}s state based on a received notice. \end{DoxyCompactList}\item 
+\Hypertarget{classDemoKiosk_a8a5ba2b6a6954271f282af9a942c83ff}\label{classDemoKiosk_a8a5ba2b6a6954271f282af9a942c83ff} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Demo\+Kiosk} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classDemoKiosk}{Demo\+Kiosk} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventUnit_a991e68e6fcacbcecca7178a6256bcb9b}{Event\+Unit}} (const std\+::string \&unit\+Name, int unit\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventUnit}{Event\+Unit} instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventUnit_a18d25238a699c90ff6126e5ea860901b}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event unit. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventUnit}{Event\+Unit} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em The capacity of the event unit. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Open}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event unit is currently open or closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a demo kiosk within the event, capable of receiving notices and reporting its status. 
+
+The \doxylink{classDemoKiosk}{Demo\+Kiosk} class inherits from \doxylink{classEventUnit}{Event\+Unit} and \doxylink{classObserver}{Observer}, allowing it to be part of the event\textquotesingle{}s unit structure, receive notifications about various events or changes in the system, and report its own status accordingly. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDemoKiosk_ab9448af8aef3b05b2a8295540a33eb82}\label{classDemoKiosk_ab9448af8aef3b05b2a8295540a33eb82} 
+\index{DemoKiosk@{DemoKiosk}!DemoKiosk@{DemoKiosk}}
+\index{DemoKiosk@{DemoKiosk}!DemoKiosk@{DemoKiosk}}
+\doxysubsubsection{\texorpdfstring{DemoKiosk()}{DemoKiosk()}}
+{\footnotesize\ttfamily Demo\+Kiosk\+::\+Demo\+Kiosk (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{kiosk\+Name,  }\item[{int}]{hardware\+Units }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classDemoKiosk}{Demo\+Kiosk} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kiosk\+Name} & The name of the demo kiosk, used for identification and reporting. \\
+\hline
+{\em hardware\+Units} & The total number of hardware units in this demo kiosk. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDemoKiosk_a3b1502c0169b3995cf41d26db1820bfc}\label{classDemoKiosk_a3b1502c0169b3995cf41d26db1820bfc} 
+\index{DemoKiosk@{DemoKiosk}!close@{close}}
+\index{close@{close}!DemoKiosk@{DemoKiosk}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Demo\+Kiosk\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the demo kiosk, powering off all hardware units. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{classDemoKiosk_a9757e61b46e68f9a7400d1ff2e7424cc}\label{classDemoKiosk_a9757e61b46e68f9a7400d1ff2e7424cc} 
+\index{DemoKiosk@{DemoKiosk}!open@{open}}
+\index{open@{open}!DemoKiosk@{DemoKiosk}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Demo\+Kiosk\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the demo kiosk, powering on all hardware units. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{classDemoKiosk_aad700506e0a5bd6efb3ac2af88758824}\label{classDemoKiosk_aad700506e0a5bd6efb3ac2af88758824} 
+\index{DemoKiosk@{DemoKiosk}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!DemoKiosk@{DemoKiosk}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Demo\+Kiosk\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reports the current status of the demo kiosk, including hardware unit counts. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{classDemoKiosk_a65d44fd2e9105ef65f8f942f432ce41d}\label{classDemoKiosk_a65d44fd2e9105ef65f8f942f432ce41d} 
+\index{DemoKiosk@{DemoKiosk}!update@{update}}
+\index{update@{update}!DemoKiosk@{DemoKiosk}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Demo\+Kiosk\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the demo kiosk\textquotesingle{}s state based on a received notice. 
+
+
+
+Implements \mbox{\hyperlink{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Demo\+Kiosk.\+h\item 
+src/Demo\+Kiosk.\+cpp\end{DoxyCompactItemize}

@@ -33,11 +33,11 @@ void DemoKiosk::reportStatus() const
 
 void DemoKiosk::update(const Notice& notice)
 {
-    std::cout << "[Booth] " << name << " received notice: " << notice.getMessage() << std::endl;
+    std::cout << "[DemoKiosk] " << name << " received notice: " << notice.getMessage() << std::endl;
 
     if (dynamic_cast<const EvacuationNotice*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": Evacuation, closing kiosk immediately." << std::endl;
+        std::cout << "[DemoKiosk] " << name << ": Evacuation, closing kiosk immediately." << std::endl;
         if (isOpen)
         {
             close();
@@ -45,15 +45,17 @@ void DemoKiosk::update(const Notice& notice)
     }
     else if (dynamic_cast<const CapacityWarning*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": capacity warning received. Limiting new visitors." << std::endl;
+        std::cout << "[DemoKiosk] " << name << ": Capacity warning received. Limiting new visitors." << std::endl;
     }
     else if (dynamic_cast<const TechnicalOutage*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": technical issue reported. Staff checking equipment." << std::endl;
+        std::cout << "[DemoKiosk] " << name << ": Dynamic Power Grid Throttling activated! Reducing power load to 50% capacity." << std::endl;
+        poweredUnits = totalUnits/2;
     }
     else if (dynamic_cast<const ResumptionNotice*>(&notice) != nullptr)
     {
-        std::cout << "[Booth] " << name << ": normal operations may resume." << std::endl;
+        std::cout << "[DemoKiosk] " << name << ": Normal operations may resume." << std::endl;
+        if (isOpen) poweredUnits = totalUnits;
     }
     else if (dynamic_cast<const OpenNotice*>(&notice) != nullptr)
     {
@@ -64,7 +66,7 @@ void DemoKiosk::update(const Notice& notice)
     }
     else
     {
-        std::cout << "[Booth] " << name << ": notice acknowledged." << std::endl;
+        std::cout << "[DemoKiosk] " << name << ": notice acknowledged." << std::endl;
     }
 
 }

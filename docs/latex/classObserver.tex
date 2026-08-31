@@ -1,0 +1,43 @@
+\doxysection{Observer Class Reference}
+\hypertarget{classObserver}{}\label{classObserver}\index{Observer@{Observer}}
+Inheritance diagram for Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classObserver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classObserver_a37824643eeaef086de17bba2717d865a}\label{classObserver_a37824643eeaef086de17bba2717d865a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}{update}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice)=0
+\begin{DoxyCompactList}\small\item\em Called by a \doxylink{classSubject}{Subject} when a \doxylink{classNotice}{Notice} is issued (push model). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}\label{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0} 
+\index{Observer@{Observer}!update@{update}}
+\index{update@{update}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Observer\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called by a \doxylink{classSubject}{Subject} when a \doxylink{classNotice}{Notice} is issued (push model). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice carrying the relevant state. Non-\/owning reference — the \doxylink{classObserver}{Observer} must not delete it. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classBooth_abbd2d8831bad0ee6e2efea0b4f7885d0}{Booth}}, \mbox{\hyperlink{classCasterBooth_ac36e4cfc85213ba45eae6c125425e0f3}{Caster\+Booth}}, \mbox{\hyperlink{classChargingStation_a0c7ea9589ecf69cd3552f33f4e3e7950}{Charging\+Station}}, \mbox{\hyperlink{classCommunityZone_aa788a063d3a78e67a2f5f9880902cbc2}{Community\+Zone}}, \mbox{\hyperlink{classCosplayMeetupPoint_a99ae8ddad00528805212f781ef6d19ec}{Cosplay\+Meetup\+Point}}, \mbox{\hyperlink{classDemoKiosk_a65d44fd2e9105ef65f8f942f432ce41d}{Demo\+Kiosk}}, \mbox{\hyperlink{classExpoFloor_acb627b76cda0193532e2ea8ffdd41a9e}{Expo\+Floor}}, \mbox{\hyperlink{classFirstAidPoint_a1f4e91e08113c163318877ed4f318864}{First\+Aid\+Point}}, \mbox{\hyperlink{classIndieAlley_aa7195c03787e219fbae059f3639092f3}{Indie\+Alley}}, \mbox{\hyperlink{classIndieBooth_a478a5d3687edefa781ef652c943b5326}{Indie\+Booth}}, \mbox{\hyperlink{classInfoDesk_a8c988a07d5b94291787b348173ddd9fa}{Info\+Desk}}, \mbox{\hyperlink{classMainArea_a7d98565cf6464005f3d15b867b402656}{Main\+Area}}, \mbox{\hyperlink{classNexusCon_a890374c0d4e9fba4bf7b55d0f2dc6ab4}{Nexus\+Con}}, \mbox{\hyperlink{classPracticeBooth_a7050d12dd71881aed95ba8b62ccebbb0}{Practice\+Booth}}, \mbox{\hyperlink{classPracticeZone_a2d7a2cc37c4706544ec464b024b35379}{Practice\+Zone}}, \mbox{\hyperlink{classPublisherRow_a3bfe31c2bbd6875afd2f1497394bac61}{Publisher\+Row}}, \mbox{\hyperlink{classQueueManagementPoint_a3e648ad86b918f29fee2b9b99ae55171}{Queue\+Management\+Point}}, \mbox{\hyperlink{classTournamentHall_a8d1d3cb00a8530917f0e981a03b8289b}{Tournament\+Hall}}, and \mbox{\hyperlink{classTournamentStage_ab427343927dc7e64a2da3167b4ab0d29}{Tournament\+Stage}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Observer.\+h\end{DoxyCompactItemize}

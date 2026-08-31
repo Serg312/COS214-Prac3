@@ -1,0 +1,24 @@
+\doxysection{Practice\+Zone.\+h}
+\hypertarget{PracticeZone_8h_source}{}\label{PracticeZone_8h_source}\index{include/PracticeZone.h@{include/PracticeZone.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PRACTICEZONE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PRACTICEZONE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EventGroup.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Subject.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNotice}{Notice}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPracticeZone}{PracticeZone}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEventGroup}{EventGroup}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObserver}{Observer}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSubject}{Subject}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPracticeZone}{PracticeZone}}(\textcolor{keyword}{const}\ std::string\&\ zoneName);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPracticeZone_a2d7a2cc37c4706544ec464b024b35379}{update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNotice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPracticeZone_a8e5cfdccec8114163fed68e3f08d64cb}{\string~PracticeZone}}();}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

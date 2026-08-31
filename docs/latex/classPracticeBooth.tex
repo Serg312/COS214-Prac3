@@ -1,0 +1,164 @@
+\doxysection{Practice\+Booth Class Reference}
+\hypertarget{classPracticeBooth}{}\label{classPracticeBooth}\index{PracticeBooth@{PracticeBooth}}
+
+
+Represents a practice booth within the event, capable of receiving notices and reporting its status.  
+
+
+
+
+{\ttfamily \#include $<$Practice\+Booth.\+h$>$}
+
+Inheritance diagram for Practice\+Booth\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPracticeBooth}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPracticeBooth_aa2759f3e7c8a52e499ed5d317864514a}{Practice\+Booth}} (const std\+::string \&booth\+Name, int player\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classPracticeBooth}{Practice\+Booth} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPracticeBooth_a7f54884525d16342048cae7e9023972b}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the practice booth, allowing players to enter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPracticeBooth_a3fbe94eb3bf141fde5ebf99fc48beac9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the practice booth, preventing further players from entering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPracticeBooth_ad1a7594fdb7d9477722a3eb238ae9d7d}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Reports the current status of the practice booth, including occupancy and capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPracticeBooth_a7050d12dd71881aed95ba8b62ccebbb0}{update}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Updates the practice booth based on the received notice. \end{DoxyCompactList}\item 
+\Hypertarget{classPracticeBooth_a5be78c18a314b83219ca80762e5dacbe}\label{classPracticeBooth_a5be78c18a314b83219ca80762e5dacbe} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Practice\+Booth} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classPracticeBooth}{Practice\+Booth} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventUnit_a991e68e6fcacbcecca7178a6256bcb9b}{Event\+Unit}} (const std\+::string \&unit\+Name, int unit\+Capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventUnit}{Event\+Unit} instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventUnit_a18d25238a699c90ff6126e5ea860901b}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event unit. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Unit} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventUnit}{Event\+Unit} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventUnit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em The capacity of the event unit. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Open}
+\begin{DoxyCompactList}\small\item\em Indicates whether the event unit is currently open or closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a practice booth within the event, capable of receiving notices and reporting its status. 
+
+The \doxylink{classPracticeBooth}{Practice\+Booth} class inherits from \doxylink{classEventUnit}{Event\+Unit} and \doxylink{classObserver}{Observer}, allowing it to be part of the event\textquotesingle{}s unit structure, receive notifications about various events or changes in the system, and report its own status accordingly. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPracticeBooth_aa2759f3e7c8a52e499ed5d317864514a}\label{classPracticeBooth_aa2759f3e7c8a52e499ed5d317864514a} 
+\index{PracticeBooth@{PracticeBooth}!PracticeBooth@{PracticeBooth}}
+\index{PracticeBooth@{PracticeBooth}!PracticeBooth@{PracticeBooth}}
+\doxysubsubsection{\texorpdfstring{PracticeBooth()}{PracticeBooth()}}
+{\footnotesize\ttfamily Practice\+Booth\+::\+Practice\+Booth (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{booth\+Name,  }\item[{int}]{player\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classPracticeBooth}{Practice\+Booth} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em booth\+Name} & The name of the practice booth, used for identification and reporting. \\
+\hline
+{\em player\+Capacity} & The maximum number of players allowed in this practice booth. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPracticeBooth_a3fbe94eb3bf141fde5ebf99fc48beac9}\label{classPracticeBooth_a3fbe94eb3bf141fde5ebf99fc48beac9} 
+\index{PracticeBooth@{PracticeBooth}!close@{close}}
+\index{close@{close}!PracticeBooth@{PracticeBooth}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Practice\+Booth\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the practice booth, preventing further players from entering. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{classPracticeBooth_a7f54884525d16342048cae7e9023972b}\label{classPracticeBooth_a7f54884525d16342048cae7e9023972b} 
+\index{PracticeBooth@{PracticeBooth}!open@{open}}
+\index{open@{open}!PracticeBooth@{PracticeBooth}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Practice\+Booth\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the practice booth, allowing players to enter. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{classPracticeBooth_ad1a7594fdb7d9477722a3eb238ae9d7d}\label{classPracticeBooth_ad1a7594fdb7d9477722a3eb238ae9d7d} 
+\index{PracticeBooth@{PracticeBooth}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!PracticeBooth@{PracticeBooth}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Practice\+Booth\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reports the current status of the practice booth, including occupancy and capacity. 
+
+
+
+Implements \mbox{\hyperlink{classEventComponent_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{classPracticeBooth_a7050d12dd71881aed95ba8b62ccebbb0}\label{classPracticeBooth_a7050d12dd71881aed95ba8b62ccebbb0} 
+\index{PracticeBooth@{PracticeBooth}!update@{update}}
+\index{update@{update}!PracticeBooth@{PracticeBooth}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Practice\+Booth\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the practice booth based on the received notice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice received by the practice booth. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Practice\+Booth.\+h\item 
+src/Practice\+Booth.\+cpp\end{DoxyCompactItemize}

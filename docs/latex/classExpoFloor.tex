@@ -1,0 +1,133 @@
+\doxysection{Expo\+Floor Class Reference}
+\hypertarget{classExpoFloor}{}\label{classExpoFloor}\index{ExpoFloor@{ExpoFloor}}
+
+
+Represents an expo floor within the event, capable of receiving notices, reporting its status, and managing child components.  
+
+
+
+
+{\ttfamily \#include $<$Expo\+Floor.\+h$>$}
+
+Inheritance diagram for Expo\+Floor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classExpoFloor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classExpoFloor_a07938fb8d00f2078d796e394e517c2ad}{Expo\+Floor}} (const std\+::string \&floor\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classExpoFloor}{Expo\+Floor} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classExpoFloor_acb627b76cda0193532e2ea8ffdd41a9e}{update}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Updates the expo floor based on the received notice, preventing further participants from entering and closing all child components. \end{DoxyCompactList}\item 
+\Hypertarget{classExpoFloor_ae0d3fe71d55bfcfe0c86f2eba523eff5}\label{classExpoFloor_ae0d3fe71d55bfcfe0c86f2eba523eff5} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Expo\+Floor} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classExpoFloor}{Expo\+Floor} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventGroup}{Event\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventGroup_a3bbf99818cfd16baeeda09585d302978}{Event\+Group}} (const std\+::string \&group\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventGroup}{Event\+Group} instance. \end{DoxyCompactList}\item 
+void {\bfseries add} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Adds a component to the event group. \end{DoxyCompactList}\item 
+bool {\bfseries remove} (\mbox{\hyperlink{classEventComponent}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em Removes a component from the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_aa12055a0456c9e6faf6de3a12a70b0e1}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens all components within the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_a600460d78e6fc8d0ec13b1767590dcc9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes all components within the event group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventGroup_abc6919ac70ecf081cdec8c3ffaadc89e}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Reports the current status of the event group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEventGroup_affe035069afc221547fe9e848017ee3c}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the event group. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Group} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventGroup}{Event\+Group} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventComponent_a893e8288f51da2088a9c09aa8cb98dae}{Event\+Component}} (const std\+::string \&component\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classEventComponent}{Event\+Component} instance. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event component. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classEventComponent}{Event\+Component} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObserver}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()
+\begin{DoxyCompactList}\small\item\em The destructor for the \doxylink{classSubject}{Subject} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_a0884bfe374d352c6488a1e40c84246c8}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Registers an observer for future notifications. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_a752a7596d52ab986539232f8377ca92c}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Deregisters an observer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSubject_ab5b0a79cd1214e08f11dbe18611e8f8c}{notify}} (const \mbox{\hyperlink{classNotice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Notifies all currently registered observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEventComponent}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSubject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classObserver}{Observer}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries observers}
+\begin{DoxyCompactList}\small\item\em Non-\/owning pointers — \doxylink{classSubject}{Subject} does not own its observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an expo floor within the event, capable of receiving notices, reporting its status, and managing child components. 
+
+The \doxylink{classExpoFloor}{Expo\+Floor} class inherits from \doxylink{classEventGroup}{Event\+Group}, \doxylink{classObserver}{Observer}, and \doxylink{classSubject}{Subject}, allowing it to be part of the event\textquotesingle{}s group structure, receive notifications about various events or changes in the system, report its own status accordingly, and manage a list of observers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classExpoFloor_a07938fb8d00f2078d796e394e517c2ad}\label{classExpoFloor_a07938fb8d00f2078d796e394e517c2ad} 
+\index{ExpoFloor@{ExpoFloor}!ExpoFloor@{ExpoFloor}}
+\index{ExpoFloor@{ExpoFloor}!ExpoFloor@{ExpoFloor}}
+\doxysubsubsection{\texorpdfstring{ExpoFloor()}{ExpoFloor()}}
+{\footnotesize\ttfamily Expo\+Floor\+::\+Expo\+Floor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{floor\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classExpoFloor}{Expo\+Floor} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em floor\+Name} & The name of the expo floor, used for identification and reporting. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classExpoFloor_acb627b76cda0193532e2ea8ffdd41a9e}\label{classExpoFloor_acb627b76cda0193532e2ea8ffdd41a9e} 
+\index{ExpoFloor@{ExpoFloor}!update@{update}}
+\index{update@{update}!ExpoFloor@{ExpoFloor}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Expo\+Floor\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNotice}{Notice}} \&}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the expo floor based on the received notice, preventing further participants from entering and closing all child components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice received by the expo floor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObserver_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Expo\+Floor.\+h\item 
+src/Expo\+Floor.\+cpp\end{DoxyCompactItemize}

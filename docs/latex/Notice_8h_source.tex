@@ -1,0 +1,59 @@
+\doxysection{Notice.\+h}
+\hypertarget{Notice_8h_source}{}\label{Notice_8h_source}\index{include/Notice.h@{include/Notice.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NOTICE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NOTICE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNotice}{Notice}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ \mbox{\hyperlink{classNotice_ad07e4c63f849c0c960addcd2fd2276a2}{message}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classNotice_aea670d2d238d0b44cd84e13b570cd7b2}{severity}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classNotice}{Notice}}(\textcolor{keyword}{const}\ std::string\&\ msg,\ \textcolor{keywordtype}{int}\ sev);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classNotice_a0687d954bb1e3c1edd08c130f81dc4ec}{\string~Notice}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::string\ \mbox{\hyperlink{classNotice_a535ec24c6347d3b92c98a1131b52d6be}{getMessage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classNotice_aa6bada2d07b30c77ac80c48798a48225}{getSeverity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEvacuationNotice}{EvacuationNotice}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classNotice}{Notice}}\ \{}
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{classEvacuationNotice}{EvacuationNotice}}(\textcolor{keyword}{const}\ std::string\&\ msg\ =\ \textcolor{stringliteral}{"{}IMMEDIATE\ EVACUATION\ REQUIRED!"{}});}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCapacityWarning}{CapacityWarning}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classNotice}{Notice}}\ \{}
+\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{classCapacityWarning}{CapacityWarning}}(\textcolor{keyword}{const}\ std::string\&\ msg\ =\ \textcolor{stringliteral}{"{}Area\ capacity\ limit\ reached."{}});}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTechnicalOutage}{TechnicalOutage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classNotice}{Notice}}\ \{}
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{classTechnicalOutage}{TechnicalOutage}}(\textcolor{keyword}{const}\ std::string\&\ msg\ =\ \textcolor{stringliteral}{"{}Technical\ outage\ reported."{}});}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQueueOverflowAlert}{QueueOverflowAlert}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classNotice}{Notice}}\ \{}
+\DoxyCodeLine{00092\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{classQueueOverflowAlert}{QueueOverflowAlert}}(\textcolor{keyword}{const}\ std::string\&\ msg\ =\ \textcolor{stringliteral}{"{}Queue\ lines\ overflowing."{}});}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classResumptionNotice}{ResumptionNotice}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classNotice}{Notice}}\ \{}
+\DoxyCodeLine{00104\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{classResumptionNotice}{ResumptionNotice}}(\textcolor{keyword}{const}\ std::string\&\ msg\ =\ \textcolor{stringliteral}{"{}Normal\ operations\ resumed."{}});}
+\DoxyCodeLine{00110\ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOpenNotice}{OpenNotice}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classNotice}{Notice}}\ \{}
+\DoxyCodeLine{00116\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{classOpenNotice}{OpenNotice}}(\textcolor{keyword}{const}\ std::string\&\ msg\ =\ \textcolor{stringliteral}{"{}Facility\ is\ now\ OPEN."{}});}
+\DoxyCodeLine{00122\ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NOTICE\_H}}
+
+\end{DoxyCode}
