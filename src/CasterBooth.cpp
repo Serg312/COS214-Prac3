@@ -44,6 +44,7 @@ void CasterBooth::update(const Notice& notice)
     else if (dynamic_cast<const TechnicalOutage*>(&notice) != nullptr)
     {
         std::cout << "[Booth] " << name << ": technical issue reported. Staff checking equipment." << std::endl;
+        isLive = false;
     }
     else if (dynamic_cast<const ResumptionNotice*>(&notice) != nullptr)
     {
