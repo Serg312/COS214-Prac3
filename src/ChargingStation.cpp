@@ -42,6 +42,7 @@ void ChargingStation::update(const Notice& notice)
     else if (dynamic_cast<const TechnicalOutage*>(&notice) != nullptr)
     {
         std::cout << "[Booth] " << name << ": technical issue reported. Staff checking charging ports." << std::endl;
+        activePorts = 0;
     }
     else if (dynamic_cast<const ResumptionNotice*>(&notice) != nullptr)
     {
