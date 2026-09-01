@@ -35,7 +35,6 @@ void TournamentStage::update(const Notice& notice)
     {
         std::cout << "[TournamentStage] " << name << ": [STREAM SYNC PROTOCOL] Emergency pause broadcast signal dispatched to streaming overlay." << std::endl;
         std::cout << "[TournamentStage] " << name << ": Evacuation, closing stage immediately." << std::endl;
-        matchInProgress = false;
         if (isOpen)
         {
             close();
